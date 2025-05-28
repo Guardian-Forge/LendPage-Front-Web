@@ -109,14 +109,14 @@ button:hover {
 /* Footer principal */
 footer {
   position: relative;
-  background: linear-gradient(135deg, #003f5c, #005f73, #0a9396);
+  background: linear-gradient(135deg, #003392, #012466, #00328f);
   color: #e0f7fa;
   text-align: center;
   padding: 100px 20px 40px;
   overflow: hidden;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   box-shadow: inset 0 0 30px rgba(0, 95, 115, 0.7);
-  border-top: 5px solid #94d2bd;
+  border-top: 5px solid #4b73ca;
 }
 
 /* Container do conteúdo do footer */
@@ -128,7 +128,7 @@ footer {
   gap: 30px;
   align-items: center;
   text-align: center;
-  color: #caf0f8;
+  color: #001fa7;
 }
 
 /* Redes sociais */
@@ -141,11 +141,11 @@ footer {
 }
 
 .redesSociais h3 {
-  font-size: 1.8rem;
+  font-size: 3rem;
   font-weight: 700;
   margin-bottom: 15px;
-  color: #ade8f4;
-  text-shadow: 1px 1px 3px #004e64;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px #06005f;
   letter-spacing: 1.2px;
 }
 
@@ -161,7 +161,7 @@ footer {
 .redesSociais ul li a img {
   width: 36px;
   height: auto;
-  filter: drop-shadow(0 0 2px rgba(0, 95, 115, 0.7));
+  filter: drop-shadow(0 0 2px rgba(240, 240, 240, 0.7));
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
@@ -173,8 +173,8 @@ footer {
 
 /* Direitos autorais */
 .direitos p {
-  color: #94d2bd;
-  font-size: 0.9rem;
+  color: #ffffff;
+  font-size: 1.5rem;
   font-weight: 400;
   margin-top: 15px;
   text-shadow: 1px 1px 2px #001f24;
@@ -220,12 +220,12 @@ footer {
 
 /* FIM DO CSS DO ROBÔ FOOTER */ 
 
-/* CSS do INDEX */
-
+/* css do Hero da página */
 .hero {
     width: 100%;
-    padding: 20px;
-    /*background-image: var(--gradient), url(../oficina-front/images/index/banner.jpg); */
+    min-height: 100dvh;
+    padding: 3rem;
+    /* background-image: var(--gradient), url(../oficina-front/images/index/banner.jpg); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
@@ -234,10 +234,132 @@ footer {
     flex-direction: column;
     justify-content: space-between;
 }
+.banner #image {
+    width: 100%;
+    
+}
 
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.hearder h2{
+    font-size: 4.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+span{
+    color: var(--color-grenn-100);
+}
+
+.header-menu{
+    display: flex;
+    gap: 2rem;
+}
 .sanduiche {
     cursor: pointer;
     position: relative;
     z-index: 2;
     display: none;
+}
+
+.barra {
+    display: block;
+    width: 3rem;
+    height: .3rem;
+    background-color: var(--color-light);
+    margin: .5rem auto;
+    border-radius: var(--radius);
+    transition: .5s;
+}
+.header-footer h1 {
+    font-size: clamp(4.5rem, 8vmax, 10rem);
+}
+
+.header-footer p{
+    font-size: 2rem;
+    font-weight: 800;
+   margin-left: .5rem; 
+}
+
+/*fim do Hero da página */
+
+/* variaveis css */
+:root {
+    --color-light: #f1f1f1;
+    --color-dark: #333;
+    --color-grenn-100: rgb(87, 151, 28);
+    --color-grenn-800: rgb(4, 42, 13);
+    --radius: 8px;
+    --gradient: linear-gradient(to top,rgba(0, 0, 0, .6), rgba(0, 0, 0, .3));
+}
+
+/* formataçoes base */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-light);
+    font-weight: 900;
+    transition: color .5s;
+}
+
+a:hover {
+    color: var(--color-grenn-100);
+}
+
+ul,ol {
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}/* variaveis css */
+:root {
+    --color-light: #494949;
+    --color-dark: #333;
+    --color-grenn-100: rgb(4, 53, 117);
+    --color-grenn-800: rgb(4, 42, 13);
+    --radius: 8px;
+    --gradient: linear-gradient(to top,rgba(0, 0, 0, .6), rgba(0, 0, 0, .3));
+}
+
+/* formataçoes base */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-light);
+    font-weight: 900;
+    transition: color .5s;
+}
+
+a:hover {
+    color: var(--color-dark)
+}
+
+ul,ol {
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
 }

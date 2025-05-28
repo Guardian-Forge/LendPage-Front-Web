@@ -114,3 +114,4 @@ function getMessage(score) {
 // Iniciar quiz automaticamente ao carregar
 nextBtn.style.display = "block";
 loadQuestion();
+
