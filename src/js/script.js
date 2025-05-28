@@ -89,3 +89,36 @@ const quizData = [
       showResult();
     }
   });
+
+  function showResult() {
+    let msg;
+    if (score === 10) {
+      msg = "Excelente! 🌟 Você é um verdadeiro defensor contra enchentes!";
+    } else if (score >= 7) {
+      msg = "Muito bom! 👏 Você entende bastante sobre prevenção.";
+    } else if (score >= 4) {
+      msg = "Você está no caminho! Aprenda mais para ajudar o Pixel.";
+    } else {
+      msg = "Ops! 🚨 Vamos estudar mais sobre como prevenir enchentes.";
+    }
+
+    quizEl.innerHTML = `
+      <div class="result">
+        Você acertou ${score} de ${quizData.length} perguntas.<br/><br/>
+        ${msg}
+      </div>
+    `;
+    nextBtn.style.display = "none";
+  }
+
+  loadQuestion();function showResult() {
+    let msg;
+    if (score === 10) {
+      msg = "Excelente! 🌟 Você é um verdadeiro defensor contra enchentes!";
+    } else if (score >= 7) {
+      msg = "Muito bom! 👏 Você entende bastante sobre prevenção.";
+    } else if (score >= 4) {
+      msg = "Você está no caminho! Aprenda mais para ajudar o Pixel.";
+    } else {
+      msg = "Ops! 🚨 Vamos estudar mais sobre como prevenir enchentes.";
+    }
