@@ -109,14 +109,13 @@ button:hover {
 /* Footer principal */
 footer {
   position: relative;
-  background: linear-gradient(135deg, #003392, #012466, #00328f);
+  background-color: #0b1f3a; /* azul marinho */
   color: #e0f7fa;
   text-align: center;
   padding: 100px 20px 40px;
   overflow: hidden;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  box-shadow: inset 0 0 30px rgba(0, 95, 115, 0.7);
-  border-top: 5px solid #4b73ca;
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.7);
 }
 
 /* Container do conteúdo do footer */
@@ -220,8 +219,8 @@ footer {
 
 /* FIM DO CSS DO ROBÔ FOOTER */ 
 
-/* css do Hero da página */
-.hero {
+/* css do Hero da página Home */
+.hero-home {
     width: 100%;
     min-height: 100dvh;
     padding: 3rem;
@@ -239,14 +238,14 @@ footer {
     
 }
 
-.header{
+.header-home{
     display: flex;
     justify-content: space-between;
     align-items: center;
 
 }
 
-.hearder h2{
+.hearder-home h2{
     font-size: 4.5rem;
     position: relative;
     z-index: 2;
@@ -256,7 +255,7 @@ span{
     color: var(--color-grenn-100);
 }
 
-.header-menu{
+.header-menu-home{
     display: flex;
     gap: 2rem;
 }
@@ -276,23 +275,70 @@ span{
     border-radius: var(--radius);
     transition: .5s;
 }
-.header-footer h1 {
-    font-size: clamp(4.5rem, 8vmax, 10rem);
+
+/*fim do Hero da página -home */
+
+/* css do header das demais páginas */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0b1f3a; /* azul marinho */
+    padding: 2.5rem 5rem; /* aumenta altura e largura interna */
+    color: var(--color-light, #ffffff);
+    width: 100%;
+    box-sizing: border-box; /* evita overflow com padding */
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.7);
 }
 
-.header-footer p{
-    font-size: 2rem;
-    font-weight: 800;
-   margin-left: .5rem; 
+.header h2 {
+    font-size: 2.5rem;
+    position: relative;
+    z-index: 2;
 }
 
-/*fim do Hero da página */
+
+
+.header-menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.header-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.header-menu a:hover {
+    color: #1100f8;
+}
+
+.sanduiche {
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    display: none;
+}
+
+.barra {
+    display: block;
+    width: 3rem;
+    height: .3rem;
+    background-color: var(--color-light, #ffffff);
+    margin: .5rem auto;
+    border-radius: var(--radius, 4px);
+    transition: .5s;
+}
+/* FIM DO CSS DO HEADER - DEMAIS PAGINAS */
 
 /* variaveis css */
 :root {
     --color-light: #f1f1f1;
     --color-dark: #333;
-    --color-grenn-100: rgb(87, 151, 28);
     --color-grenn-800: rgb(4, 42, 13);
     --radius: 8px;
     --gradient: linear-gradient(to top,rgba(0, 0, 0, .6), rgba(0, 0, 0, .3));
@@ -363,3 +409,5 @@ img {
     display: block;
     max-width: 100%;
 }
+
+

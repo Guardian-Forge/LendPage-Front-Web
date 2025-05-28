@@ -115,3 +115,25 @@ function getMessage(score) {
 nextBtn.style.display = "block";
 loadQuestion();
 
+const mensagens = [
+    "Escaneando...",
+    "Alerta de chuva!",
+    "Risco de enchente!",
+    "Monitorando área...",
+    "Sistema online",
+    "Verificação completa!"
+  ];
+
+  const mensagemEl = document.querySelector(".mensagem-robo");
+
+  function mostrarMensagemAleatoria() {
+    const index = Math.floor(Math.random() * mensagens.length);
+    mensagemEl.textContent = mensagens[index];
+    
+    // Força reiniciar a animação
+    mensagemEl.style.animation = "none";
+    void mensagemEl.offsetWidth; // força reflow
+    mensagemEl.style.animation = "fade 3s ease-in-out";
+  }
+
+  setInterval(mostrarMensagemAleatoria, 4000); // troca a cada 4s
