@@ -56,3 +56,36 @@ const quizData = [
 
   const quizEl = document.getElementById("quiz");
   const nextBtn = document.getElementById("next");
+
+  function loadQuestion() {
+    const q = quizData[current];
+    quizEl.innerHTML = `
+      <div class="question">${q.question}</div>
+      <div class="answers">
+        ${q.options.map(opt => `
+          <label>
+            <input type="radio" name="answer" value="${opt}"> ${opt}
+          </label>
+        `).join("")}
+      </div>
+    `;
+  }
+
+  nextBtn.addEventListener("click", () => {
+    const selected = document.querySelector('input[name="answer"]:checked');
+    if (!selected) {
+      alert("Por favor, selecione uma resposta!");
+      return;
+    }
+
+    if (selected.value === quizData[current].answer) {
+      score++;
+    }
+
+    current++;
+    if (current < quizData.length) {
+      loadQuestion();
+    } else {
+      showResult();
+    }
+  });
