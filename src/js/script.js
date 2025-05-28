@@ -122,3 +122,14 @@ const quizData = [
     } else {
       msg = "Ops! 🚨 Vamos estudar mais sobre como prevenir enchentes.";
     }
+
+     quizEl.innerHTML = `
+      <div class="result">
+        Você acertou ${score} de ${quizData.length} perguntas.<br/><br/>
+        ${msg}
+      </div>
+    `;
+    nextBtn.style.display = "none";
+  }
+
+  loadQuestion();
