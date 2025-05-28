@@ -97,3 +97,46 @@ button:hover {
   background-color: #1de9b6;
 }
 /* FIM DO CSS DO QUIZ */
+
+/* CSS DO ROBÔ FOOTER */
+.footer {
+  position: relative;
+  background: linear-gradient(to top, #001f3f, #001e38);
+  color: white;
+  text-align: center;
+  padding: 80px 20px 20px;
+  overflow: hidden;
+}
+
+.patrulha-area {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  height: 64px; /* altura da imagem */
+  overflow: hidden;
+}
+
+@keyframes patrulha {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -80px;
+  }
+}
+
+.robo-animado {
+  height: 64px;
+  position: absolute;
+  bottom: 0;
+  animation: patrulha 12s linear infinite;
+}
+
+.footer-text {
+  position: relative;
+  z-index: 1;
+  margin-top: 60px;
+  font-size: 1rem;
+}
+/* FIM DO CSS DO ROBÔ FOOTER */ 
