@@ -62,7 +62,7 @@ function loadQuestion() {
   const showHomeLink = current === 0;
 
   quizEl.innerHTML = `
-    ${showHomeLink ? `<a href="index.html" class="top-left-home">← Voltar para Home</a>` : ""}
+    ${showHomeLink ? `<a href="../../index.html" class="top-left-home">← Voltar para Home</a>` : ""}
     <div class="question">${q.question}</div>
     <div class="answers">
       ${q.options.map(opt => `
@@ -95,7 +95,7 @@ nextBtn.addEventListener("click", () => {
 
 function showResult() {
   quizEl.innerHTML = `
-    <a href="index.html" class="top-left-home">← Voltar para Home</a>
+    <a href="../../index.html" class="top-left-home">← Voltar para Home</a>
     <div class="result">
       Você acertou ${score} de ${quizData.length} perguntas.<br/><br/>
       ${getMessage(score)}
