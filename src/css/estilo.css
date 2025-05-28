@@ -1,3 +1,10 @@
+/* RESET DO CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* CSS DO QUIZ*/
 #quiz-page {
       margin: 0;
@@ -140,3 +147,5 @@ button:hover {
   font-size: 1rem;
 }
 /* FIM DO CSS DO ROBÔ FOOTER */ 
+
+/* CSS do INDEX */
