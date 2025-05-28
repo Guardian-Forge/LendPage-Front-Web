@@ -221,3 +221,23 @@ footer {
 /* FIM DO CSS DO ROBÔ FOOTER */ 
 
 /* CSS do INDEX */
+
+.hero {
+    width: 100%;
+    padding: 20px;
+    /*background-image: var(--gradient), url(../oficina-front/images/index/banner.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    color: var(--color-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sanduiche {
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    display: none;
+}
