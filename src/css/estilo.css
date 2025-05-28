@@ -323,6 +323,7 @@ span{
     display: flex;
     gap: 2rem;
     list-style: none;
+    align-items: center;
 }
 
 .header-menu a {
@@ -330,6 +331,24 @@ span{
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
+    line-height: 1.6;
+}
+
+#login-link {
+  padding: 5px 10px;
+  border: 2px solid #007BFF; /* azul vibrante */
+  border-radius: 8px;
+  background-color: white;
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+#login-link:hover {
+  background-color: #007BFF;
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
 }
 
 .header-menu a:hover {
