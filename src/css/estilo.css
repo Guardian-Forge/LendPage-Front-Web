@@ -1,0 +1,99 @@
+/* CSS DO QUIZ*/
+#quiz-page {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #004d40, #00695c);
+      color: #e0f2f1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+ 
+    }
+
+.container-quiz {
+      background: rgba(0, 77, 64, 0.95);
+      padding: 30px;
+      border-radius: 16px;
+      width: 90%;
+      max-width: 600px;
+      box-shadow: 0 0 15px #00bfa5;
+    }
+
+h1, .robot {
+      text-align: center;
+      color: #a7ffeb;
+    }
+
+.robot {
+      font-size: 60px;
+      text-shadow: 0 0 8px #00bfa5;
+    }
+
+.question {
+      font-size: 1.2em;
+      margin: 20px 0 10px;
+    }
+
+.answers label {
+      display: block;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+
+#next {
+      background: #e6e6e6;
+      color: #004d40;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 1em;
+      width: 100%;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+button:hover {
+      background: #1de9b6;
+    }
+
+.result {
+      text-align: center;
+      font-size: 1.3em;
+      margin-top: 20px;
+      color: #a7ffeb;
+    }
+
+.home-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: #00bfa5;
+  color: #004d40;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.home-link:hover {
+  background-color: #1de9b6;
+}
+
+.top-left-home {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #00bfa5;
+  color: #004d40;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.top-left-home:hover {
+  background-color: #1de9b6;
+}
+/* FIM DO CSS DO QUIZ */
