@@ -1,9 +1,9 @@
-// Slideshow
+// Slideshow home
 function iniciarSlideShow() {
   const imagens = [
-    'src/assets/banner1.jpg',
-    'src/assets/banner2.jpg',
-    'src/assets/banner3.jpg'
+    'src/assets/banner1.png',
+    'src/assets/banner2.png',
+    'src/assets/banner3.png'
   ];
   let i = 0;
   const tempo = 3000;
