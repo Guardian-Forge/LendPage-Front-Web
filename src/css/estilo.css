@@ -12,10 +12,20 @@
 /* formataçoes base */
 html {
     font-size: 62.5%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    
 }
 
 body {
     font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -159,7 +169,6 @@ h1, .robot {
 /* CSS DO ROBÔ FOOTER */
 /* Footer principal */
 footer {
-  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -247,7 +256,6 @@ footer {
 }
 
 .patrulha-area {
-  position: absolute;
   top: 10px;
   left: 0;
   width: 100%;
@@ -265,8 +273,8 @@ footer {
 }
 
 .robo-animado {
+  position: relative;
   height: 64px;
-  position: absolute;
   bottom: 0;
   animation: patrulha 12s linear infinite;
 }
@@ -465,7 +473,28 @@ background-color: #0055aa;
   text-decoration: underline;
 }
 
-/* responsividade */
+.btn-voltar {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0 20px;
+  background-color: white;
+  border: 2px solid #003366;
+  border-radius: 8px;
+  color: #0055aa;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-voltar:hover {
+  background-color: #999999;
+  color: #0055aa;
+}
+
+/* responsividade hamburguer*/
 @media(width <=1024px){
   .sanduiche {
       display: block;
@@ -513,7 +542,7 @@ background-color: #0055aa;
   flex-direction: column;
   align-items: center; /* centraliza horizontalmente */
   gap: 30px;
-  padding: 20px;
+  padding: 110px;
 }
 
 .bloco-tecnologia,
