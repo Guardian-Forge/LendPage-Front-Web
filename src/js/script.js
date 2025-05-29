@@ -20,6 +20,53 @@ function iniciarSlideShow() {
   if (hero) slideShow();
 }
 
+//Slideshow problemas
+const images = [
+  '../assets/enchente1.jpg',
+  '../assets/enchente2.jpg',
+  '../assets/enchente3.jpg'
+];
+
+function createSlideShow(containerId, images) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+
+  // Cria div principal do slideshow
+  const slideShowDiv = document.createElement('div');
+  slideShowDiv.classList.add('slideshow-container');
+
+  // Cria os slides
+  images.forEach((src, index) => {
+    const slideDiv = document.createElement('div');
+    slideDiv.classList.add('slide');
+    if (index === 0) slideDiv.style.display = 'block'; // mostra o primeiro slide
+
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = `Imagem ${index + 1}`;
+
+    slideDiv.appendChild(img);
+    slideShowDiv.appendChild(slideDiv);
+  });
+
+  container.appendChild(slideShowDiv);
+
+  // Controla o slideshow
+  let currentIndex = 0;
+  const slides = slideShowDiv.getElementsByClassName('slide');
+
+  setInterval(() => {
+    slides[currentIndex].style.display = 'none'; // oculta o atual
+    currentIndex = (currentIndex + 1) % slides.length; // próximo índice circular
+    slides[currentIndex].style.display = 'block'; // mostra o próximo
+  }, 4000); // muda a cada 4 segundos
+}
+
+// Inicializa o slideshow
+window.onload = () => {
+  createSlideShow('slideShowRoot', images);
+};
+
 // Menu sanduíche
 function iniciarMenuSanduiche() {
   const headerMenu = document.querySelector('.header-menu');
@@ -36,24 +83,6 @@ function iniciarMenuSanduiche() {
       if (e.target.classList.contains('item-menu')) toggleMenu();
     });
   }
-}
-
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  const slides = document.getElementsByClassName("slide");
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-
-  slideIndex++;
-  if (slideIndex > slides.length) {
-    slideIndex = 1;
-  }
-
-  slides[slideIndex - 1].style.display = "block";
-  setTimeout(showSlides, 3000); // troca a cada 3 segundos
 }
 
 
@@ -178,3 +207,4 @@ function iniciarQuiz() {
 iniciarSlideShow();
 iniciarMenuSanduiche();
 iniciarQuiz();
+
