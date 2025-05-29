@@ -159,14 +159,16 @@ h1, .robot {
 /* CSS DO ROBÔ FOOTER */
 /* Footer principal */
 footer {
-  position: relative;
-  background-color: #0b1f3a; /* azul marinho */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* manter o resto do estilo */
+  background-color: #0b1f3a;
   color: #e0f7fa;
-  text-align: center;
   padding: 100px 20px 40px;
-  overflow: hidden;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.7);
+  z-index: 1000; /* garantir que fique na frente */
 }
 
 /* Container do conteúdo do footer */
@@ -228,6 +230,7 @@ footer {
   font-weight: 400;
   margin-top: 15px;
   text-shadow: 1px 1px 2px #001f24;
+  text-align: center;
 }
 
 /* Responsividade */
@@ -502,3 +505,50 @@ background-color: #0055aa;
       font-size: 3rem;
   }
 }
+
+/* CSS DO CONTEÚDO DA PÁGINA DE TECNOLOGIA E MONITORAMENTO */
+
+.sessao-conteudo-tecnologia {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centraliza horizontalmente */
+  gap: 30px;
+  padding: 20px;
+}
+
+.bloco-tecnologia,
+.bloco-monitoramento {
+  width: 80%; /* limita a largura para ficar bonito centralizado */
+  max-width: 800px;
+  background-color: #f0f4f8;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.bloco-tecnologia img,
+.bloco-monitoramento img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.bloco-tecnologia h2,
+.bloco-monitoramento h2 {
+  font-size: 2rem;
+  color: #1a237e;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.bloco-tecnologia p,
+.bloco-monitoramento p {
+  font-size: 2rem;
+  line-height: 1.6;
+  color: #333;
+  text-align: justify;
+}
+
+
+/*Fim da sessao tecnologia css*/
