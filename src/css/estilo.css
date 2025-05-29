@@ -4,7 +4,39 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* variaveis do CSS */
+:root {
+    --color-light: #ffffff;
+    --color-grenn-100: rgb(4, 53, 117);
+}
+/* formataçoes base */
+html {
+    font-size: 62.5%;
+}
 
+body {
+    font-size: 1.6rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-light);
+    font-weight: 900;
+    transition: color .5s;
+}
+
+a:hover {
+    color: var(--color-grenn-100);
+}
+
+ul,ol {
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
 /* CSS MODERNO PARA O QUIZ */
 
 #quiz-page {
@@ -238,46 +270,28 @@ footer {
 
 /* FIM DO CSS DO ROBÔ FOOTER */ 
 
-/* css do Hero da página Home */
+
 .hero-home {
-    width: 100%;
-    min-height: 100dvh;
-    padding: 3rem;
-    /* background-image: var(--gradient), url(../oficina-front/images/index/banner.jpg); */
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50%;
-    color: var(--color-light);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  width: 100%;
+  min-height: 100dvh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  color: var(--color-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: background-image 0.5s ease-in-out;
 }
+
 .banner #image {
-    width: 100%;
-    
-}
-
-.header-home{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
-
-.hearder-home h2{
-    font-size: 4.5rem;
-    position: relative;
-    z-index: 2;
+    width: 100%;  
 }
 
 span{
-    color: var(--color-grenn-100);
+    color:  #1266d4;
 }
 
-.header-menu-home{
-    display: flex;
-    gap: 2rem;
-}
 .sanduiche {
     cursor: pointer;
     position: relative;
@@ -294,8 +308,6 @@ span{
     border-radius: var(--radius);
     transition: .5s;
 }
-
-/*fim do Hero da página -home */
 
 /* css do header das demais páginas */
 
@@ -373,79 +385,120 @@ span{
 }
 /* FIM DO CSS DO HEADER - DEMAIS PAGINAS */
 
-/* variaveis css */
-:root {
-    --color-light: #f1f1f1;
-    --color-dark: #333;
-    --color-grenn-800: rgb(4, 42, 13);
-    --radius: 8px;
-    --gradient: linear-gradient(to top,rgba(0, 0, 0, .6), rgba(0, 0, 0, .3));
+/* inicio do css do login.html */
+.body-login {
+  background: linear-gradient(to right, #0a1e3f, #123d6d); /* azul marinho */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
 }
 
-/* formataçoes base */
-html {
-    font-size: 62.5%;
+.login-card {
+  background-color: #ffffff15;
+  padding: 40px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  color: white;
+  text-align: center;
 }
 
-body {
-    font-size: 1.6rem;
+.logo {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffffff;
 }
 
-a {
-    text-decoration: none;
-    color: var(--color-light);
-    font-weight: 900;
-    transition: color .5s;
+.subtitle {
+  font-size: 0.9em;
+  margin-bottom: 30px;
+  color: #d0e6ff;
 }
 
-a:hover {
-    color: var(--color-grenn-100);
+form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #e0ecf9;
+  color: #0a1e3f;
+  font-size: 1em;
 }
 
-ul,ol {
-    list-style: none;
+form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #003366;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-img {
-    display: block;
-    max-width: 100%;
-}/* variaveis css */
-:root {
-    --color-light: #494949;
-    --color-dark: #333;
-    --color-grenn-100: rgb(4, 53, 117);
-    --color-grenn-800: rgb(4, 42, 13);
-    --radius: 8px;
-    --gradient: linear-gradient(to top,rgba(0, 0, 0, .6), rgba(0, 0, 0, .3));
+form button:hover {
+background-color: #0055aa;
 }
 
-/* formataçoes base */
-html {
-    font-size: 62.5%;
+.forgot-password {
+  display: block;
+  margin-top: 15px;
+  font-size: 0.85em;
+  color: #a0c4e8;
+  text-decoration: none;
 }
 
-body {
-    font-size: 1.6rem;
+.forgot-password:hover {
+  text-decoration: underline;
 }
 
-a {
-    text-decoration: none;
-    color: var(--color-light);
-    font-weight: 900;
-    transition: color .5s;
+/* responsividade */
+@media(width <=1024px){
+  .sanduiche {
+      display: block;
+  }
+  .header-menu{
+      width: 100%;
+      height:  100dvh;
+      background: var(--gradient);
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: -100%;
+      gap:0;
+      text-align: center;
+      flex-direction: column;
+      justify-content: center;
+      transition: 0.5s;
+        
+  }
+  .active{
+      left: 0;
+  }
+  .sanduiche.active .barra:first-child{
+      transform: translateY(8px) rotate(360deg) rotate(45deg);
+
+  }
+
+  .sanduiche.active .barra:nth-child(2){
+      opacity: 0;
+
+  }
+  .sanduiche.active .barra:last-child{
+      transform: translateY(-8px) rotate(-360deg) rotate(-45deg);
+  }
+  .header-menu{
+      gap:6rem;
+      font-size: 3rem;
+  }
 }
-
-a:hover {
-    color: var(--color-dark)
-}
-
-ul,ol {
-    list-style: none;
-}
-
-img {
-    display: block;
-    max-width: 100%;
-}
-
-
