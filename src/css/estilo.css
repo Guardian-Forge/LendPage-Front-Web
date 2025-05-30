@@ -667,6 +667,7 @@ background-color: #0055aa;
   width: 100%;
   height: 100%;
   box-sizing: border-box;
+  flex-direction: column;
 }
 
 /* Card estilizado como na página de tecnologias */
@@ -674,6 +675,8 @@ background-color: #0055aa;
   background-color: #f0f4f8;
   backdrop-filter: blur(10px);
   padding: 40px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   border-radius: 15px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
   max-width: 700px;
@@ -791,6 +794,13 @@ background-color: #0055aa;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+.bloco-objetivos img,
+.bloco-beneficios img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
 .bloco-objetivos h2,
 .bloco-beneficios h2 {
   font-size: 3rem;
