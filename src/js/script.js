@@ -289,7 +289,4 @@ new Chart(ctx, {
   options: opcoesGrafico
 });
 
-// Inicializações
-iniciarSlideShow();
-iniciarMenuSanduiche();
-iniciarQuiz();
+
