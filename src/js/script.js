@@ -85,6 +85,18 @@ function iniciarMenuSanduiche() {
   }
 }
 
+// Seleciona todos os botões que mudam o fundo
+const bgButtons = document.querySelectorAll('.header-buttons button');
+
+bgButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    // Pega a cor do atributo data-bg
+    const color = btn.getAttribute('data-bg');
+    // Aplica a cor no body
+    document.body.style.backgroundColor = color;
+  });
+});
+
 
 // Quiz
 function iniciarQuiz() {

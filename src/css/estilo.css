@@ -284,16 +284,43 @@ footer {
 
 .hero-home {
   width: 100%;
-  min-height: 100dvh;
+  height: 100vh; /* altura total da tela */
+  display: flex; 
+  align-items: center;     /* centro vertical */
+  flex-direction: column;
+  text-align: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50%;
-  color: var(--color-light);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: background-image 0.5s ease-in-out;
+  background-position: center;
+  color: var(--color-light); /* sua cor clara */
+  gap: 10px;
 }
+
+.hero-apresentacao {
+  max-width: 600px;
+  margin: 300px;
+  
+}
+
+.titulo-empresa {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #1266d4; /* mesma cor do header */
+  margin-bottom: 10px;
+  font-size: 5rem;
+}
+
+.titulo-empresa span {
+  color: white;
+  font-size: 5rem;
+}
+
+.frase-empresa {
+  font-size: 2em;
+  color: #edeef0;
+}
+
+
 
 .banner #image {
     width: 100%;  
@@ -338,6 +365,50 @@ span{
     font-size: 2.5rem;
     position: relative;
     z-index: 2;
+}
+
+/* Novo container para botões */
+.header-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-right: 1rem;
+}
+
+/* Estilo dos botões pequenos */
+.header-buttons button {
+  width: 24px;
+  height: 24px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.header-buttons button:hover {
+  transform: scale(1.2);
+}
+
+/* Cores dos botões */
+.btn-white {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+}
+
+.btn-lightblue {
+  background-color: #add8e6; /* azul claro */
+  border: 1px solid #7bb1d9;
+}
+
+.btn-lightgray {
+  background-color: #d3d3d3; /* cinza claro */
+  border: 1px solid #a9a9a9;
+}
+
+.header h2 {
+  font-size: 2.5rem;
+  position: relative;
+  z-index: 2;
+  margin: 0; /* remove margens extras */
 }
 
 
@@ -702,14 +773,14 @@ background-color: #0055aa;
 /* FIM DO CSS DA PÁGINA DO PÚBLICO-ALVO E DIA A DIA */
 
 /* CSS DA PÁGINA DOS OBJETIVOS E BENEFÍCIOS */
-.sessao-conteudo-objetivo-e-beneficios{
+.sessao-conteudo-objetivo-e-beneficios {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
   padding: 110px;
 }
-
 .bloco-objetivos,
 .bloco-beneficios {
   width: 80%;
