@@ -819,35 +819,64 @@ background-color: #0055aa;
 /* FIM DO CSS DA PÁGINA DOS OBJETIVOS E BENEFÍCIOS */
 /* CSS DA PÁGINA DO GRÁFICO*/
 
-.sessao-grafico{
+.sessao-grafico {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 30px;
-  padding: 110px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .bloco-grafico {
-  width: 80%;
-  max-width: 800px;
-  background-color: #f0f4f8;
+  flex: 1 1 500px;
+  background-color: #f0f8ff;
+  border: 2px solid #007acc;
+  border-radius: 8px;
   padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.descricao-grafico {
-  width: 80%;
+.grafico-container {
   max-width: 800px;
-  background-color: #f0f4f8;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  padding: 1rem;
 }
 
-.descricao-grafico p {
+.explicacao-grafico {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+.explicacao-grafico h3 {
+  margin-bottom: 0.5rem;
+  color: #0077cc;
+  font-size: 3rem;
+}
+
+.explicacao-grafico p {
   font-size: 2rem;
-  line-height: 1.6;
+  line-height: 1.5;
   color: #333;
-  text-align: justify;
+}
+canvas#graficoNivelRio {
+  width: 100% !important;
+  height: 400px !important;
+  display: block;
+}
+
+html, body {
+  height: 50%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
 }

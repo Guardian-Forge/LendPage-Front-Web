@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/fonts.css" />
-    <link rel="stylesheet" href="../css/estilo.css" />
-    <title>Análise de Enchentes em Rochdale (Osasco) - Gráfico de enchente</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/fonts.css" />
+  <link rel="stylesheet" href="../css/estilo.css" />
+  <title>Análise de Enchentes em Rochdale (Osasco) - Gráfico de enchente</title>
 </head>
 <body>
-    <!-- hero do index -->
+
+  <!-- hero do index -->
   <section class="hero">
     <header class="header">
       <div class="header-buttons">
@@ -30,7 +31,6 @@
         </ul>
       </nav>
 
-      <!-- Botao sanduiche -->
       <div class="sanduiche">
         <span class="barra"></span>
         <span class="barra"></span>
@@ -38,59 +38,46 @@
       </div>
     </header>
   </section>
-  <!-- conteúdo principal da página grafico.html -->
-    <main class="sessao-grafico">
-    <article class="bloco-grafico">
-      <img src="../assets/" alt="Gráfico feito por um robô pixel em Rochdale (Osasco)" />
-    </article>
-    <article class="descricao-grafico">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sollicitudin, diam a vehicula egestas, orci lectus pellentesque nunc, vitae rhoncus leo dui non eros. Suspendisse non convallis massa, ut facilisis mauris. Ut molestie, nisi nec commodo porttitor, mi orci viverra augue, viverra hendrerit nibh turpis vel ipsum. Fusce eleifend sollicitudin porttitor. Integer a quam sem. In vitae lobortis nulla. Pellentesque turpis eros, pulvinar non volutpat sed, ullamcorper at quam. Mauris fermentum luctus iaculis. In euismod luctus dui. Donec volutpat ex ac ligula viverra eleifend. Quisque mattis congue lorem, eget viverra nunc scelerisque id. Mauris elit eros, scelerisque sed erat pretium, finibus dictum nulla. Proin malesuada id mi id tristique. Nullam sit amet tempus eros. Sed feugiat gravida diam sit amet viverra. Phasellus non eros erat.
-      </p>
-    </article>
-  </main>
+
+  <!-- Conteúdo principal da página de gráfico -->
+  <main class="sessao-grafico">
+  <section class="grafico-container">
+    <canvas id="graficoNivelRio" width="800" height="400"></canvas>
+  </section>
+
+  <section class="explicacao-grafico">
+    <h3>Análise do Nível do Rio em Rochdale (Osasco)</h3>
+    <p>
+      O gráfico acima mostra a variação do nível do rio ao longo de 10 dias consecutivos de chuva na região de Rochdale, em Osasco.
+      A linha azul representa o nível real do rio a cada dia. A linha vermelha tracejada marca o limite de 2 metros, que indica risco de transbordamento.
+      Observa-se que, a partir do 6º dia, o nível ultrapassa a faixa de segurança, atingindo um pico de 2,7 metros no 8º dia. 
+      Esses dados são essenciais para prever enchentes e planejar ações emergenciais de evacuação e monitoramento urbano.
+    </p>
+  </section>
+</main>
 
   <footer class="footer">
     <div id="footer-content">
-
-      <!-- Robô animado -->
       <div class="patrulha-area">
         <img src="../assets/robo-patrulha-footer.png" alt="Robô patrulheiro" class="robo-animado" />
       </div>
-
-      <!-- Redes sociais -->
       <div class="redesSociais">
         <h3>Redes Sociais</h3>
         <ul>
-          <li>
-            <a href="https://www.instagram.com" target="_blank">
-              <img src="../assets/instagram.png" alt="Instagram" />
-            </a>
-          </li>
-          <li>
-            <a href="https://www.facebook.com" target="_blank">
-              <img src="../assets/facebook.png" alt="Facebook" />
-            </a>
-          </li>
-          <li>
-            <a href="https://www.x.com" target="_blank">
-              <img src="../assets/twitter.png" alt="Twitter" />
-            </a>
-          </li>
+          <li><a href="https://www.instagram.com" target="_blank"><img src="../assets/instagram.png" alt="Instagram" /></a></li>
+          <li><a href="https://www.facebook.com" target="_blank"><img src="../assets/facebook.png" alt="Facebook" /></a></li>
+          <li><a href="https://www.x.com" target="_blank"><img src="../assets/twitter.png" alt="Twitter" /></a></li>
         </ul>
       </div>
-
-      <!-- Direitos autorais -->
       <div class="direitos">
         <p>&copy; 2025 GuardianForge. Todos os direitos reservados.</p>
       </div>
-
     </div>
   </footer>
 
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Seu script com o gráfico -->
   <script src="../js/script.js"></script>
-</body>
-</html>
-    
 </body>
 </html>

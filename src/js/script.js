@@ -1,3 +1,4 @@
+
 // Slideshow home
 function iniciarSlideShow() {
   const imagens = [
@@ -220,3 +221,75 @@ iniciarSlideShow();
 iniciarMenuSanduiche();
 iniciarQuiz();
 
+const ctx = document.getElementById('graficoNivelRio').getContext('2d');
+
+const dadosNivelRio = {
+  labels: [
+    "Dia 1", "Dia 2", "Dia 3", "Dia 4", "Dia 5",
+    "Dia 6", "Dia 7", "Dia 8", "Dia 9", "Dia 10"
+  ],
+  datasets: [
+    {
+      label: "Nível do Rio (m)",
+      data: [0.3, 0.6, 1.1, 1.7, 1.9, 2.1, 2.5, 2.7, 2.3, 1.8],
+      fill: true,
+      borderColor: "#0077cc",
+      backgroundColor: "rgba(0, 119, 204, 0.2)",
+      tension: 0.4,
+      pointBackgroundColor: "#0077cc",
+      pointRadius: 5
+    },
+    {
+      label: "Limite de Risco (2m)",
+      data: Array(10).fill(2),
+      borderColor: "red",
+      borderWidth: 2,
+      borderDash: [5, 5],
+      pointRadius: 0,
+      fill: false
+    }
+  ]
+};
+
+const opcoesGrafico = {
+  responsive: true,
+  scales: {
+    y: {
+      beginAtZero: true,
+      max: 3,
+      title: {
+        display: true,
+        text: 'Altura (metros)'
+      }
+    },
+    x: {
+      title: {
+        display: true,
+        text: 'Dias'
+      }
+    }
+  },
+  plugins: {
+    legend: {
+      display: true
+    },
+    tooltip: {
+      callbacks: {
+        label: function (context) {
+          return `${context.dataset.label}: ${context.parsed.y.toFixed(2)}m`;
+        }
+      }
+    }
+  }
+};
+
+new Chart(ctx, {
+  type: 'line',
+  data: dadosNivelRio,
+  options: opcoesGrafico
+});
+
+// Inicializações
+iniciarSlideShow();
+iniciarMenuSanduiche();
+iniciarQuiz();
