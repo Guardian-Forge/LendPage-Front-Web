@@ -445,7 +445,7 @@ span{
 }
 
 .header-menu a:hover {
-    color: #1100f8;
+    color: yellow;
 }
 
 .sanduiche {
@@ -567,7 +567,7 @@ background-color: #0055aa;
 /* responsividade hamburguer*/
 @media(width <=1024px){
   .sanduiche {
-      display: block;
+    display: block;
   }
   .header-menu{
       width: 100%;
@@ -582,6 +582,7 @@ background-color: #0055aa;
       flex-direction: column;
       justify-content: center;
       transition: 0.5s;
+      background-color: #003366;
         
   }
   .active{
