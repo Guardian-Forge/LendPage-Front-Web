@@ -17,9 +17,13 @@
         <div class="login-card">
             <h1 class="logo">GuardianForge</h1>
             <p class="subtitle">Te protegendo contra as enchentes</p>
-            <form id="login-form" class="login-form">
+            <form id="login-form" class="login-form" novalidate>
                 <input type="email" id="email" placeholder="Email" required />
+                <span class="error-message" id="email-error"></span>
+
                 <input type="password" id="senha" placeholder="Senha" required />
+                <span class="error-message" id="senha-error"></span>
+
                 <button type="submit">Entrar</button>
                 <a href="../../index.html" class="btn-voltar">Voltar para a Home</a>
                 <a href="#" class="forgot-password">Esqueceu a senha?</a>

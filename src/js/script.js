@@ -1,4 +1,3 @@
-
 // Slideshow home
 function iniciarSlideShow() {
   const imagens = [
@@ -21,7 +20,7 @@ function iniciarSlideShow() {
   if (hero) slideShow();
 }
 
-//Slideshow problemas
+// Slideshow problemas
 const images = [
   '../assets/enchente1.jpg',
   '../assets/enchente2.jpg',
@@ -32,15 +31,13 @@ function createSlideShow(containerId, images) {
   const container = document.getElementById(containerId);
   if (!container) return;
 
-  // Cria div principal do slideshow
   const slideShowDiv = document.createElement('div');
   slideShowDiv.classList.add('slideshow-container');
 
-  // Cria os slides
   images.forEach((src, index) => {
     const slideDiv = document.createElement('div');
     slideDiv.classList.add('slide');
-    if (index === 0) slideDiv.style.display = 'block'; // mostra o primeiro slide
+    if (index === 0) slideDiv.style.display = 'block';
 
     const img = document.createElement('img');
     img.src = src;
@@ -52,15 +49,14 @@ function createSlideShow(containerId, images) {
 
   container.appendChild(slideShowDiv);
 
-  // Controla o slideshow
   let currentIndex = 0;
   const slides = slideShowDiv.getElementsByClassName('slide');
 
   setInterval(() => {
-    slides[currentIndex].style.display = 'none'; // oculta o atual
-    currentIndex = (currentIndex + 1) % slides.length; // próximo índice circular
-    slides[currentIndex].style.display = 'block'; // mostra o próximo
-  }, 4000); // muda a cada 4 segundos
+    slides[currentIndex].style.display = 'none';
+    currentIndex = (currentIndex + 1) % slides.length;
+    slides[currentIndex].style.display = 'block';
+  }, 4000);
 }
 
 // Inicializa o slideshow
@@ -86,18 +82,15 @@ function iniciarMenuSanduiche() {
   }
 }
 
-// Seleciona todos os botões que mudam o fundo
+// Mudar cor de fundo
 const bgButtons = document.querySelectorAll('.header-buttons button');
 
 bgButtons.forEach(btn => {
   btn.addEventListener('click', () => {
-    // Pega a cor do atributo data-bg
     const color = btn.getAttribute('data-bg');
-    // Aplica a cor no body
     document.body.style.backgroundColor = color;
   });
 });
-
 
 // Quiz
 function iniciarQuiz() {
@@ -221,72 +214,104 @@ iniciarSlideShow();
 iniciarMenuSanduiche();
 iniciarQuiz();
 
-const ctx = document.getElementById('graficoNivelRio').getContext('2d');
+// Gráfico de nível do rio
+const ctx = document.getElementById('graficoNivelRio')?.getContext('2d');
 
-const dadosNivelRio = {
-  labels: [
-    "Dia 1", "Dia 2", "Dia 3", "Dia 4", "Dia 5",
-    "Dia 6", "Dia 7", "Dia 8", "Dia 9", "Dia 10"
-  ],
-  datasets: [
-    {
-      label: "Nível do Rio (m)",
-      data: [0.3, 0.6, 1.1, 1.7, 1.9, 2.1, 2.5, 2.7, 2.3, 1.8],
-      fill: true,
-      borderColor: "#0077cc",
-      backgroundColor: "rgba(0, 119, 204, 0.2)",
-      tension: 0.4,
-      pointBackgroundColor: "#0077cc",
-      pointRadius: 5
-    },
-    {
-      label: "Limite de Risco (2m)",
-      data: Array(10).fill(2),
-      borderColor: "red",
-      borderWidth: 2,
-      borderDash: [5, 5],
-      pointRadius: 0,
-      fill: false
-    }
-  ]
-};
+if (ctx) {
+  const dadosNivelRio = {
+    labels: [
+      "Dia 1", "Dia 2", "Dia 3", "Dia 4", "Dia 5",
+      "Dia 6", "Dia 7", "Dia 8", "Dia 9", "Dia 10"
+    ],
+    datasets: [
+      {
+        label: "Nível do Rio (m)",
+        data: [0.3, 0.6, 1.1, 1.7, 1.9, 2.1, 2.5, 2.7, 2.3, 1.8],
+        fill: true,
+        borderColor: "#0077cc",
+        backgroundColor: "rgba(0, 119, 204, 0.2)",
+        tension: 0.4,
+        pointBackgroundColor: "#0077cc",
+        pointRadius: 5
+      },
+      {
+        label: "Limite de Risco (2m)",
+        data: Array(10).fill(2),
+        borderColor: "red",
+        borderWidth: 2,
+        borderDash: [5, 5],
+        pointRadius: 0,
+        fill: false
+      }
+    ]
+  };
 
-const opcoesGrafico = {
-  responsive: true,
-  scales: {
-    y: {
-      beginAtZero: true,
-      max: 3,
-      title: {
-        display: true,
-        text: 'Altura (metros)'
+  const opcoesGrafico = {
+    responsive: true,
+    scales: {
+      y: {
+        beginAtZero: true,
+        max: 3,
+        title: {
+          display: true,
+          text: 'Altura (metros)'
+        }
+      },
+      x: {
+        title: {
+          display: true,
+          text: 'Dias'
+        }
       }
     },
-    x: {
-      title: {
-        display: true,
-        text: 'Dias'
-      }
-    }
-  },
-  plugins: {
-    legend: {
-      display: true
-    },
-    tooltip: {
-      callbacks: {
-        label: function (context) {
-          return `${context.dataset.label}: ${context.parsed.y.toFixed(2)}m`;
+    plugins: {
+      legend: {
+        display: true
+      },
+      tooltip: {
+        callbacks: {
+          label: function (context) {
+            return `${context.dataset.label}: ${context.parsed.y.toFixed(2)}m`;
+          }
         }
       }
     }
+  };
+
+  new Chart(ctx, {
+    type: 'line',
+    data: dadosNivelRio,
+    options: opcoesGrafico
+  });
+}
+
+// Validação do formulário de login
+document.getElementById('login-form').addEventListener('submit', function (event) {
+  const email = document.getElementById('email');
+  const senha = document.getElementById('senha');
+  const emailError = document.getElementById('email-error');
+  const senhaError = document.getElementById('senha-error');
+
+  let isValid = true;
+
+  // Limpa mensagens anteriores
+  emailError.textContent = '';
+  senhaError.textContent = '';
+
+  // Validação do email
+  if (email.value.trim() === '') {
+    emailError.textContent = 'Por favor, informe o seu email.';
+    isValid = false;
   }
-};
 
-new Chart(ctx, {
-  type: 'line',
-  data: dadosNivelRio,
-  options: opcoesGrafico
+  // Validação da senha
+  if (senha.value.trim() === '') {
+    senhaError.textContent = 'Por favor, informe a sua senha.';
+    isValid = false;
+  }
+
+  // Se houver erro, bloqueia envio
+  if (!isValid) {
+    event.preventDefault();
+  }
 });
-
-

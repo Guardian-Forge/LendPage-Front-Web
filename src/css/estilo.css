@@ -444,6 +444,14 @@ span{
   box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
 }
 
+.error-message {
+  color: #ff6b6b;
+  font-size: 0.85em;
+  margin-bottom: 10px;
+  display: block;
+}
+
+
 .header-menu a:hover {
     color: yellow;
 }
