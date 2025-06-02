@@ -371,6 +371,8 @@ span{
 .header-buttons {
   display: flex;
   gap: 0.5rem;
+  margin-left: -130rem;
+  transform: translateX(-50px);
 }
 
 /* Estilo dos botões pequenos */
@@ -409,8 +411,6 @@ span{
   z-index: 2;
   margin: 0; /* remove margens extras */
 }
-
-
 
 .header-menu {
     display: flex;
