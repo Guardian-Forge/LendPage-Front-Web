@@ -231,7 +231,10 @@ if (ctx) {
         borderColor: "#0077cc",
         backgroundColor: "rgba(0, 119, 204, 0.2)",
         tension: 0.4,
-        pointBackgroundColor: "#0077cc",
+        pointBackgroundColor: [
+    "#0077cc", "#0077cc", "#0077cc", "#0077cc", "#0077cc",
+    "red", "red", "red", "red", "#0077cc"
+    ],
         pointRadius: 5
       },
       {
